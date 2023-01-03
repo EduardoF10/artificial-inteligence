@@ -5,11 +5,10 @@ This module defines the stack data structure.
 
 class Stack(list):
 
-	def __init__(self, iterable = None):
-		if iterable == None:
-			list.__init__(self)
-		else:
-			list.__init__(self, iterable)
+	def __init__(self, item = None):
+		list.__init__(self)
+		if item != None:
+			self.push(item)
 
 	def push(self, item):
 		self.append(item)
